@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>血壓管理 App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>血壓管理</h1>
+
+    <form id="bpForm">
+      <label>收縮壓<br><input type="number" id="systolic" required></label>
+      <label>舒張壓<br><input type="number" id="diastolic" required></label>
+      <label>脈搏<br><input type="number" id="pulse" required></label>
+      <label>用藥狀態<br>
+        <select id="medication">
+          <option value="無">無</option>
+          <option value="已服藥">已服藥</option>
+          <option value="未服藥">未服藥</option>
+        </select>
+      </label>
+      <label>備註<br><textarea id="notes" rows="3"></textarea></label>
+      <button type="submit">儲存</button>
+    </form>
+
+    <section>
+      <h2>紀錄清單</h2>
+      <table id="entries">
+        <thead>
+          <tr>
+            <th>時間</th>
+            <th>收縮</th>
+            <th>舒張</th>
+            <th>脈搏</th>
+            <th>用藥</th>
+            <th>備註</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
