@@ -8,7 +8,18 @@
 </head>
 <body>
   <div class="container">
-    <h1>血壓管理</h1>
+    <header class="site-header">
+      <div class="header-left">
+        <h1>血壓管理</h1>
+      </div>
+      <div class="header-right">
+        <label class="theme-switch" role="switch" aria-checked="false" aria-label="切換佈景主題">
+          <input type="checkbox" id="themeToggle">
+          <span class="slider" aria-hidden="true"></span>
+          <span class="theme-label">主題</span>
+        </label>
+      </div>
+    </header>
 
     <form id="bpForm">
       <label>收縮壓<br><input type="number" id="systolic" required></label>
@@ -27,19 +38,21 @@
 
     <section>
       <h2>紀錄清單</h2>
-      <table id="entries">
-        <thead>
-          <tr>
-            <th>時間</th>
-            <th>收縮</th>
-            <th>舒張</th>
-            <th>脈搏</th>
-            <th>用藥</th>
-            <th>備註</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <div class="table-wrapper">
+        <table id="entries">
+          <thead>
+            <tr>
+              <th>時間</th>
+              <th>收縮</th>
+              <th>舒張</th>
+              <th>脈搏</th>
+              <th>用藥</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </section>
   </div>
 
